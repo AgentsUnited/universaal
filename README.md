@@ -43,3 +43,7 @@ This is an Android App. You can use Android Studio or the Android sdk tools to b
 5. Once the app connects you will see a button for each type of device to take the measurement. Press it, then take the measurement, and wait for it to appear in the screen. It will be immediately sent to the universAAL REST API (You should see a message pop up in the Karaf console).
 
 ## Troubleshooting
+
+## License
+
+These modules are licensed under the GNU Lesser General Public License v3.0 (LGPL 3.0).
