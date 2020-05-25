@@ -3,7 +3,7 @@
 These projects are applications used to connect the Agents United platform to the universAAL IoT Platform. This allows Agents United to incorporate sensor data from devices connected in universAAL. Right now we only connect to data from weight-scales and blood pressure sensors.
 
 * **uaal.hbaf**: This is a Java Maven project of an universAAL application that acts as a Relay App: It is run as a bundle in a Karaf OSGi instance of universAAL. It receives any data coming from weight-scales and blood pressure sensors connected to unviersAAL, and then delivers this data to Agents United HBAF module.
-* **uaal.mobile** (coming soon): This is an Android app. It connects to Continua-certified weight-scales and blood pressure sensors and provides a user interface to take their measurements. Then it sends this data to the Karaf OSGi instance of universAAL where uaal.hbaf is running.
+* **uaal.mobile**: This is an Android app. It connects to Continua-certified weight-scales and blood pressure sensors and provides a user interface to take their measurements. Then it sends this data to the Karaf OSGi instance of universAAL where uaal.hbaf is running.
 
 ## Build
 
