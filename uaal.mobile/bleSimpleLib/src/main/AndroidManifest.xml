@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.co.aandd.bleSimpleApp"
+    android:versionCode="1"
+    android:versionName="Sample 1.0.0" > <!-- This build based on WA 1.0.35 -->
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
+    <application>
+        <uses-library
+            android:name="com.samsung.android.sdk.bt"
+            android:required="false" />
+        <uses-library
+            android:name="com.htc.android.bluetooth.le"
+            android:required="false" />
+        <service android:name=".BleHelperService" />
+        <activity android:name=".BleHelperActivity"/>
+    </application>
+
+</manifest>

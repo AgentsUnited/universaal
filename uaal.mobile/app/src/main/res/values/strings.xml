@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Council of Coaches sensors</string>
+
+    <string name="label_BP651">Blood Pressure UA-651BLE</string>
+    <string name="label_BP767">Blood Pressure UA-767PBT</string>
+    <string name="label_WS352">Weight Scale UC-352BLE</string>
+    <string name="label_WS321">Weight Scale UC-321PBT</string>
+    <string name="label_sys">Systolic :</string>
+    <string name="label_dia">Diastolic :</string>
+    <string name="label_hr">Heart rate :</string>
+    <string name="label_error">Error code :</string>
+    <string name="label_timestamp">Last measurement taken at %c</string>
+    <string name="label_empty">--</string>
+    <string name="label_back">Back</string>
+
+    <string name="units_weight">Kg.</string>
+    <string name="units_press">mmHg</string>
+    <string name="units_hr">bpm</string>
+
+    <string name="hint_ws352">Keep this screen visible while the weight is being measured. Once it is measured, wait until it appears here.</string>
+    <string name="hint_ws321">Once the weight is measured, wait until it appears here. You may be asked for a PIN the first time: 39121440</string>
+    <string name="hint_bp651">Keep this screen visible while the pressure is being measured. Once it is measured, wait until it appears here.</string>
+    <string name="hint_bp767">Once the pressure is measured, wait until it appears here. You may be asked for a PIN the first time: 39121440</string>
+    <string name="hint_prep_ws321">Press this button to prepare communication with the weight scale</string>
+    <string name="hint_prep_ws767">Press this button to prepare communication with the blood pressure monitor</string>
+
+    <string name="warning_not_a_bp">Received a blood pressure value but was expecting weight. Value not displayed, but sent anyway.</string>
+    <string name="warning_not_a_ws">Received a weight value but was expecting blood pressure. Value not displayed, but sent anyway.</string>
+    <string name="warning_bt_not_enabled">Bluetooth must be enabled to access this feature.</string>
+    <string name="warning_bt_not_granted">Location permission is needed to access nearby Bluetooth devices</string>
+    <string name="warning_store_not_granted">Storage permission is needed to save system files</string>
+
+    <string name="error_sending_value">Could not send data, try again later</string>
+    <string name="error_reading_value">Error retrieving value from device</string>
+
+    <string name="pref_name">Settings</string>
+    <string name="pref_unit">Weight unit</string>
+    <string-array name="pref_units">
+        <item>@string/pref_unit_none</item>
+        <item>@string/pref_unit_kg</item>
+        <item>@string/pref_unit_lb</item>
+    </string-array>
+    <string-array name="pref_units_val">
+        <item>@string/pref_unit_none_enum</item>
+        <item>@string/pref_unit_kg_enum</item>
+        <item>@string/pref_unit_lb_enum</item>
+    </string-array>
+    <string name="pref_unit_none">None</string>
+    <string name="pref_unit_kg">Kilograms (kg)</string>
+    <string name="pref_unit_lb">Pounds (lb)</string>
+    <string name="pref_unit_none_enum" translatable="false">--</string>
+    <string name="pref_unit_kg_enum" translatable="false">KG</string>
+    <string name="pref_unit_lb_enum" translatable="false">LB</string>
+    <string name="pref_name_user">Log out</string>
+
+    <string name="login_email">email</string>
+    <string name="login_password">password</string>
+    <string name="login_action_short">login</string>
+    <string name="login_action">Log in</string>
+    <string name="login_failed">Login canceled</string>
+    <string name="login_invalid_username">Invalide username</string>
+    <string name="login_invalid_password">Invalid password</string>
+    <string name="login_welcome">Welcome </string>
+    <string name="login_failed_invalid">Invalid login details</string>
+    <string name="login_failed_connection">Could not login. Check network and settings with technical support.</string>
+
+    <string name="setting_connusr_instr">String that uniquely identifies this universAAL node for the Remote API</string>
+    <string name="setting_connusr_text">Identifier of this node for the Remote API</string>
+    <string name="setting_connusr_title">Client identification</string>
+    <string name="setting_connpwd_instr">Password that uniquely identifies this universAAL node for the Remote API</string>
+    <string name="setting_connpwd_text">Password associated to this node for the Remote API</string>
+    <string name="setting_connpwd_title">Client password</string>
+    <string name="setting_connurl_instr">Full URL (protocol to context) of the server hosting the Remote API</string>
+    <string name="setting_connurl_text">URL of the server hosting the Remote API</string>
+    <string name="setting_connurl_title">Remote connection URL</string>
+
+    <string name="pinOk">OK</string>
+    <string name="pinTitle">Insert security PIN to modify settings</string>
+    <string name="pinError">Incorrect PIN</string>
+</resources>

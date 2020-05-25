@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:title="@string/pref_unit"
+        android:entries="@array/pref_units"
+        android:entryValues="@array/pref_units_val"
+        android:key="pref_unit" />
+
+    <EditTextPreference
+        android:defaultValue="http://130.89.78.74:9000/uaal"
+        android:dialogMessage="@string/setting_connurl_instr"
+        android:key="setting_connurl_key"
+        android:summary="@string/setting_connurl_text"
+        android:title="@string/setting_connurl_title" />
+
+    <EditTextPreference
+        android:defaultValue="couch"
+        android:dialogMessage="@string/setting_connusr_instr"
+        android:key="setting_connusr_key"
+        android:summary="@string/setting_connusr_text"
+        android:title="@string/setting_connusr_title" />
+
+    <EditTextPreference
+        android:defaultValue="couch"
+        android:dialogMessage="@string/setting_connpwd_instr"
+        android:key="setting_connpwd_key"
+        android:summary="@string/setting_connpwd_text"
+        android:title="@string/setting_connpwd_title" />
+
+</PreferenceScreen>
