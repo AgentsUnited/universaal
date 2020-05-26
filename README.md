@@ -16,7 +16,9 @@ The **uaal.mobile** project is an Android app. You can use Android sdk or the An
 ### Relay app
 This is an universAAL bundle, you need to run it in a Karaf OSGi instance of universAAL. Then you will need to install the universAAL REST API there so that the Mobile App can send the data there.
 1. Go to [universAAL's Github](https://github.com/universAAL) and clone or download the Karaf distro. The latest version, which is the one compatible with our code, is not yet released, so you will have to build the distro. Follow the instructions in https://github.com/universAAL/distro.karaf. (essentially, clone/download, then `mvn install`)
-2. Before you run the Karaf distro (or afterwards, as long as you restart), go to `{your karaf folder}\etc` and edit `system.properties`. Add this property `org.universAAL.ri.rest.manager.serv.host=http://192.168.1.1:9000/` and set the IP to your host's IP. This is where the universAAL REST API will be published. Make sure it's an IP the Mobile App will be able to access.
+2. Before you run the Karaf distro (or afterwards, as long as you restart), go to `{your karaf folder}\etc` and edit `system.properties`.
+   * Add this property `org.universAAL.ri.rest.manager.serv.host=http://192.168.1.1:9000/` and set the IP to your host's IP. This is where the universAAL REST API will be published. Make sure it's an IP the Mobile App will be able to access.
+   * Add this property `eu.councilofcoaches.uaal.hbaf.url` and set it to the base URL where your Agents United HBAF server is running.
 3. Run the universAAL Karaf distro by running the `{your karaf folder}\bin\karaf` script. Once you see 5 "GMS" messages in the console, it is up and running.
 4. Install the universAAL REST API and the needed ontologies with the following commands in the Karaf console:
    * `feature:install uAAL-Ont.Health.Measurement`
@@ -43,6 +45,7 @@ This is an Android App. You can use Android Studio or the Android sdk tools to b
 5. Once the app connects you will see a button for each type of device to take the measurement. Press it, then take the measurement, and wait for it to appear in the screen. It will be immediately sent to the universAAL REST API (You should see a message pop up in the Karaf console).
 
 ## Troubleshooting
+* If you get an error message in the app after taking a measurement about not connecting to the server, try logout (upper right menu) and login again.
 
 ## License
 
