@@ -41,11 +41,12 @@ public class HBAFClient {
     public static final String LOGIN_PWD = "marcel@couch";
     public static final String FILE_WEIGHT="weightfile";
     public static final String FILE_BP="BloodpressureFile";
-    public static final String URL_WEIGHT = "https://couch.utwente.nl/upload_weightscale_data";
-    public static final String URL_BP = "https://couch.utwente.nl/upload_bloodpressure_data";
-    public static final String URL_WEIGHT_NEW = "https://couch.utwente.nl/upload_weightscale_data_new";
-    public static final String URL_BP_NEW = "https://couch.utwente.nl/upload_bloodpressure_data_new";
-    public static final String URL_LOGIN = "https://couch.utwente.nl/login";
+    public static final String URL_BASE = System.getProperty("eu.councilofcoaches.uaal.hbaf.url", "https://couch.utwente.nl");
+    public static final String URL_WEIGHT = URL_BASE+"/upload_weightscale_data";
+    public static final String URL_BP = URL_BASE+"/upload_bloodpressure_data";
+    public static final String URL_WEIGHT_NEW = URL_BASE+"/upload_weightscale_data_new";
+    public static final String URL_BP_NEW = URL_BASE+"/upload_bloodpressure_data_new";
+    public static final String URL_LOGIN = URL_BASE+"/login";
 //  private static CookieManager cookies = new CookieManager();
     private static DecodedJWT jwt = null;
     

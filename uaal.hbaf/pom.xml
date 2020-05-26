@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.councilofcoaches</groupId>
 	<artifactId>uaal.hbaf</artifactId>
-	<version>0.0.8-SNAPSHOT</version>
+	<version>0.0.9-SNAPSHOT</version>
 	<name>universAAL relay app</name>
 	<description>Relays uAAL events into HBAF</description>
 	<packaging>bundle</packaging>
