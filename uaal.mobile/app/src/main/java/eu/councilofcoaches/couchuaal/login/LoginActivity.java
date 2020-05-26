@@ -176,8 +176,8 @@ public class LoginActivity extends AppCompatActivity {
         return true;
     }
 
-    private void updateUiWithUser(String model) {
-        String welcome = getString(R.string.login_welcome) + model;
+    private void updateUiWithUser(String user) {
+        String welcome = getString(R.string.login_welcome) + user;
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
         startActivity(new Intent(this, MainActivity.class));
         setResult(Activity.RESULT_OK);

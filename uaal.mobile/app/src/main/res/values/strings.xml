@@ -77,4 +77,6 @@
     <string name="pinOk">OK</string>
     <string name="pinTitle">Insert security PIN to modify settings</string>
     <string name="pinError">Incorrect PIN</string>
+    <string name="event_failed_connection">Authentication failed. Try to log out and log in again.</string>
+    <string name="generic_failed_exception">An unknown error happened. Check network and setting wtih technical support.</string>
 </resources>

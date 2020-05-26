@@ -111,8 +111,8 @@ public abstract class SensorActivity extends BleHelperActivity {
 
         @Override
         protected void onPostExecute(final UaalResult result) {
-            if (!(result instanceof UaalResult.Success)) {
-                Toast.makeText(getApplicationContext(), R.string.error_sending_value, Toast.LENGTH_LONG).show();
+            if (result instanceof UaalResult.Error) {
+                Toast.makeText(getApplicationContext(), ((UaalResult.Error) result).getError(), Toast.LENGTH_LONG).show();
             }
         }
 

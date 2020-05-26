@@ -25,8 +25,6 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 import eu.councilofcoaches.couchuaal.R;
-import eu.councilofcoaches.couchuaal.uaalutils.Base64;
-import eu.councilofcoaches.couchuaal.uaalutils.UaalResult;
 
 /**
  * Class that handles authentication w/ login credentials and retrieves user information.
@@ -83,7 +81,7 @@ public class UaalDataSource {
             // If both are OK, auth and register are OK
             return new UaalResult.Success<>(username);
         } catch (Exception e) {
-            return new UaalResult.Error(R.string.login_failed_connection);
+            return new UaalResult.Error(R.string.generic_failed_exception);
         }
     }
 
@@ -95,11 +93,11 @@ public class UaalDataSource {
         try{
             int result = sendHTTP("POST", url + "/spaces/" + username + "/context/publishers/default", body, username, password, true);
             if ((result < 200 || result > 299)){
-                return new UaalResult.Error(R.string.login_failed_connection);
+                return new UaalResult.Error(R.string.event_failed_connection);
             }
             return new UaalResult.Success<>("");
         } catch (Exception e) {
-            return new UaalResult.Error(R.string.login_failed_connection);
+            return new UaalResult.Error(R.string.generic_failed_exception);
         }
     }
 
