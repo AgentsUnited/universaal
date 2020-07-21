@@ -2,12 +2,14 @@
 
 These projects are applications used to connect the Agents United platform to the universAAL IoT Platform. This allows Agents United to incorporate sensor data from devices connected in universAAL. Right now we only connect to data from weight-scales and blood pressure sensors.
 
-* **uaal.hbaf**: This is a Java Maven project of an universAAL application that acts as a Relay App: It is run as a bundle in a Karaf OSGi instance of universAAL. It receives any data coming from weight-scales and blood pressure sensors connected to unviersAAL, and then delivers this data to Agents United HBAF module.
+* **uaal.hbaf**: This is a Java Maven project of an universAAL application that acts as a Relay App: It is run as a bundle in a Karaf OSGi instance of universAAL. It receives any data coming from weight-scales and blood pressure sensors connected to universAAL, and then delivers this data to Agents United HBAF module.
 * **uaal.mobile**: This is an Android app. It connects to Continua-certified weight-scales and blood pressure sensors and provides a user interface to take their measurements. Then it sends this data to the Karaf OSGi instance of universAAL where uaal.hbaf is running.
+* **uaal.coaching**: This is a Java Maven project of an universAAL application that allows other universAAL apps to start coaching sessions in Agents United. It is run as a bundle in a Karaf OSGi instance of universAAL. It publishes a universAAL service based on the coaching ontology (see below) to start coaching sessions, by sending the command to Agents United.
+* **uaal.coaching.ont**: This is a Java Maven project of an universAAL ontology representing the coaching domain. It is added as a bundle in a Karaf OSGi instance of universAAL.
 
 ## Build
 
-The **uaal.hbaf** Relay App is a Java Maven project that produces an OSGi bundle. You need to have Maven installed and then execute `mvn install` in the folder where the `pom.xml` is.
+The **uaal.hbaf**, **uaal.coaching** and **uaal.coaching.ont** projects are Java Maven projects that produce an OSGi bundle. You need to have Maven installed and then execute `mvn install` in the folder where the `pom.xml` is.
 
 The **uaal.mobile** project is an Android app. You can use Android sdk or the Android Studio IDE to build the `.apk`.
 
@@ -43,6 +45,9 @@ This is an Android App. You can use Android Studio or the Android sdk tools to b
 3. Enter your credentials, which should have been created in advance and registered in HBAF.
 4. Press Login, and wait until the app validates, connects and starts. If it does not connect after a while, force close the app, and start again.
 5. Once the app connects you will see a button for each type of device to take the measurement. Press it, then take the measurement, and wait for it to appear in the screen. It will be immediately sent to the universAAL REST API (You should see a message pop up in the Karaf console).
+
+### UniversAAL Agents United Coaching App integration
+Coming soon.
 
 ## Troubleshooting
 * If you get an error message in the app after taking a measurement about not connecting to the server, try logout (upper right menu) and login again.
